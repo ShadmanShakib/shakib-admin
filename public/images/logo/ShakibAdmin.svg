@@ -1,0 +1,25 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 32" width="176" height="32">
+	<title>logo-dark-svg</title>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 24px;fill: #000000;font-weight: 400;font-family: "DejaVuSans", "DejaVu Sans" } 
+		.t1 { font-size: 24px;fill: #ffffff;font-weight: 400;font-family: "DejaVuSans", "DejaVu Sans" } 
+		.s2 { fill: #ffffff } 
+	</style>
+	<text id="Admin" style="transform: matrix(-0.049,-0.999,.999,-0.049,60.256,116.422)" >
+		<tspan x="0" y="18.2" class="t0">A</tspan><tspan  y="18.2" class="t0">d</tspan><tspan  y="18.2" class="t0">m</tspan><tspan  y="18.2" class="t0">i</tspan><tspan  y="18.2" class="t0">n</tspan><tspan  y="18.2" class="t0">
+</tspan>
+	</text>
+	<text id="Shakib Admin" style="transform: matrix(1,.001,-0.001,1,2.017,4.463)" >
+		<tspan x="0" y="18.2" class="t1">S</tspan><tspan  y="18.2" class="t1">h</tspan><tspan  y="18.2" class="t1">a</tspan><tspan  y="18.2" class="t1">k</tspan><tspan  y="18.2" class="t1">i</tspan><tspan  y="18.2" class="t1">b</tspan><tspan  y="18.2" class="t1"> </tspan><tspan  y="18.2" class="t1">A</tspan><tspan  y="18.2" class="t1">d</tspan><tspan  y="18.2" class="t1">m</tspan><tspan  y="18.2" class="t1">i</tspan><tspan  y="18.2" class="t1">n
+</tspan>
+	</text>
+	<g id="Layer">
+		<path id="Layer" class="s2" d="m8.4 8.4c0-0.9 0.8-1.7 1.7-1.7 0.9 0 1.7 0.8 1.7 1.7v15.2c0 0.9-0.8 1.7-1.7 1.7-0.9 0-1.7-0.8-1.7-1.7z"/>
+	</g>
+	<g id="Layer" style="opacity: .9">
+	</g>
+	<g id="Layer" style="opacity: .7">
+		<path id="Layer" class="s2" d="m21.1 10.9c0-0.9 0.7-1.6 1.6-1.6 1 0 1.7 0.7 1.7 1.6v12.7c0 0.9-0.7 1.7-1.7 1.7-0.9 0-1.6-0.8-1.6-1.7z"/>
+	</g>
+</svg>
