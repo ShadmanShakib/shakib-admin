@@ -30,10 +30,7 @@ export default function RootLayout({
           ) : (
             <div className="flex h-screen overflow-hidden">
               {/* <!-- ===== Sidebar Start ===== --> */}
-              <Sidebar
-                sidebarOpen={sidebarOpen}
-                setSidebarOpen={setSidebarOpen}
-              />
+              <Sidebar />
               {/* <!-- ===== Sidebar End ===== --> */}
 
               {/* <!-- ===== Content Area Start ===== --> */}
