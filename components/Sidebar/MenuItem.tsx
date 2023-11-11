@@ -25,12 +25,21 @@ function MenuItem(props: Props) {
             {},
           )}
         >
-          <Link className="flex items-center justify-center" href={props.href}>
+          <div className="flex items-center justify-center">
             <div className="mr-2">{props.icon}</div>
-            {isSidebarOpen && (
-              <p className="text-lg group-hover:text-white">{title}</p>
-            )}
-          </Link>
+            {
+              <p
+                className={cn(
+                  "gorup-hover:block  text-lg group-hover:text-white",
+                  {
+                    hidden: !isSidebarOpen,
+                  },
+                )}
+              >
+                {title}
+              </p>
+            }
+          </div>
         </button>
       </CollapsiblePrimitive.Trigger>
       <CollapsiblePrimitive.CollapsibleContent>

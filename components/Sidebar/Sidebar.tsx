@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import SidebarLinkGroup from "./SidebarLinkGroup";
 import Image from "next/image";
 import {
   LineChartIcon,
@@ -16,11 +15,13 @@ import {
   Settings,
   Table2Icon,
   FormInputIcon,
+  HomeIcon,
 } from "lucide-react";
 import { useSidebar } from "./use-sidebar";
 import { cn } from "@/app/libs/utlis";
 import MenuItem from "./MenuItem";
 import LinkItem from "./LinkItem";
+import ExpandMenu from "./ExpandMenu";
 
 interface SidebarProps {}
 
@@ -31,43 +32,34 @@ const Sidebar = ({}: SidebarProps) => {
   return (
     <aside
       className={cn(
-        `absolute left-0 top-0 z-9999 flex h-screen w-24 flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 `,
+        `absolute left-0 top-0 z-9999 flex h-screen w-20 flex-col overflow-y-hidden bg-black duration-300 ease-linear  dark:bg-boxdark lg:static lg:translate-x-0 `,
         {
-          "w-72.5": isSidebarOpen,
+          "w-70": isSidebarOpen,
         },
       )}
     >
       {/* <!-- SIDEBAR HEADER --> */}
-      <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
+      <div className="relative flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
         <Link className="flex items-center" href="/">
           <Image
-            className="h-10 w-10 rounded-md"
-            width={100}
-            height={100}
+            className="h-6 w-6 rounded-md"
+            width={400}
+            height={400}
             src={"/images/logo/logo-icon.png"}
             alt="Logo"
           />
           {isSidebarOpen && (
             <h1 className=" ml-2 text-xl font-semibold text-white">
-              Shakib Admin
+              ShakibAdmin
             </h1>
           )}
         </Link>
-
-        <button
-          onClick={toggleSidebar}
-          aria-controls="sidebar"
-          aria-expanded={isSidebarOpen}
-          className="block text-white"
-        >
-          <MenuIcon />
-        </button>
       </div>
       {/* <!-- SIDEBAR HEADER --> */}
 
       <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
         {/* <!-- Sidebar Menu --> */}
-        <nav className="mt-5 px-4 py-4 lg:mt-9 lg:px-6">
+        <nav className="px-4 py-4  lg:px-6">
           {/* <!-- Menu Group --> */}
           <div>
             <ul
@@ -76,54 +68,56 @@ const Sidebar = ({}: SidebarProps) => {
               })}
             >
               {/* <!-- Menu Item Dashboard --> */}
+
               <MenuItem
                 href="/"
-                icon={<LineChartIcon className="h-8 w-8 hover:text-white" />}
+                icon={<HomeIcon className="h-6 w-6 hover:text-white" />}
                 title="Dashboard"
               >
                 <LinkItem icon={<ShoppingBag />} title="E-commerce" href="/" />
                 <LinkItem icon={<AreaChart />} title="SaaS" href="/saas" />
               </MenuItem>
+              <ExpandMenu />
               {/* <!-- Menu Item Dashboard --> */}
 
               {/* <!-- Menu Item Calendar --> */}
-              <li>
+              {/* <li>
                 <MenuItem
                   title="Calendar"
                   href="/calendar"
-                  icon={<Calendar className="h-8 w-8" />}
+                  icon={<Calendar className="h-6 w-6" />}
                 ></MenuItem>
-              </li>
+              </li> */}
               {/* <!-- Menu Item Calendar --> */}
 
               {/* <!-- Menu Item Profile --> */}
-              <li>
+              {/* <li>
                 <MenuItem
                   title="Profile"
                   href="/profile"
-                  icon={<User2Icon className="h-8 w-8" />}
+                  icon={<User2Icon className="h-6 w-6" />}
                 ></MenuItem>
-              </li>
+              </li> */}
               {/* <!-- Menu Item Profile --> */}
 
               {/* <!-- Menu Item Forms --> */}
-              <li>
+              {/* <li>
                 <MenuItem
                   title="Form"
                   href="/forms"
-                  icon={<FormInputIcon className="h-8 w-8" />}
+                  icon={<FormInputIcon className="h-6 w-6" />}
                 ></MenuItem>
-              </li>
+              </li> */}
               {/* <!-- Menu Item Forms --> */}
 
               {/* <!-- Menu Item Tables --> */}
-              <li>
+              {/* <li>
                 <MenuItem
                   title="Tables"
                   href="/tables"
-                  icon={<Table2Icon className="h-8 w-8" />}
+                  icon={<Table2Icon className="h-6 w-6" />}
                 ></MenuItem>
-              </li>
+              </li> */}
 
               {/* <!-- Menu Item Tables --> */}
 
@@ -132,7 +126,7 @@ const Sidebar = ({}: SidebarProps) => {
                 <MenuItem
                   title="Settings"
                   href="/settings"
-                  icon={<Settings className="h-8 w-8" />}
+                  icon={<Settings className="h-6 w-6" />}
                 ></MenuItem>
               </li>
 
@@ -143,7 +137,7 @@ const Sidebar = ({}: SidebarProps) => {
                 <MenuItem
                   title="Charts"
                   href="/charts"
-                  icon={<BarChart2 className="h-8 w-8" />}
+                  icon={<BarChart2 className="h-6 w-6" />}
                 ></MenuItem>
               </li>
 
@@ -154,9 +148,9 @@ const Sidebar = ({}: SidebarProps) => {
               {/* <!-- Dropdown Menu Start --> */}
               <li>
                 <MenuItem
-                  title="Ui Elements"
+                  title="UI"
                   href="/ui"
-                  icon={<Component className="h-8 w-8" />}
+                  icon={<Component className="h-6 w-6" />}
                 ></MenuItem>
               </li>
 
@@ -167,7 +161,7 @@ const Sidebar = ({}: SidebarProps) => {
                 <MenuItem
                   title="Authentication"
                   href="/auth"
-                  icon={<LockIcon className="h-8 w-8" />}
+                  icon={<LockIcon className="h-6 w-6" />}
                 ></MenuItem>
               </li>
 
