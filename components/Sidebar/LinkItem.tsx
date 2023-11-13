@@ -13,11 +13,11 @@ const LinkItem = (props: Props) => {
   const isSidebarOpen = useSidebar((state) => state.isSidebarOpen);
   return (
     <Link
-      className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 `}
+      className={`group relative flex items-center  gap-2.5 rounded-sm px-3 py-2 font-medium  duration-300 ease-in-out  dark:hover:text-white `}
       href={props.href}
     >
-      {props.icon}
-      <p>{title}</p>
+      <div className="">{props.icon}</div>
+      <p>{isSidebarOpen && title}</p>
     </Link>
   );
 };

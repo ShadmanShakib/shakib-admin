@@ -71,72 +71,67 @@ const Sidebar = ({}: SidebarProps) => {
               })}
             >
               {/* <!-- Menu Item Dashboard --> */}
-
-              <ExpandMenu>
-                <LinkItem icon={<ShoppingBag />} title="E-commerce" href="/" />
-                <LinkItem icon={<AreaChart />} title="SaaS" href="/saas" />
-              </ExpandMenu>
+              <li>
+                <ExpandMenu>
+                  <LinkItem
+                    icon={<ShoppingBag />}
+                    title="E-commerce"
+                    href="/"
+                  />
+                  <LinkItem icon={<AreaChart />} title="SaaS" href="/saas" />
+                </ExpandMenu>
+              </li>
               {/* <!-- Menu Item Dashboard --> */}
 
               {/* <!-- Menu Item Calendar --> */}
-              {/* <li>
-                <MenuItem
+              <li>
+                <LinkItem
                   title="Calendar"
                   href="/calendar"
                   icon={<Calendar className="h-6 w-6" />}
-                ></MenuItem>
-              </li> */}
+                ></LinkItem>
+              </li>
               {/* <!-- Menu Item Calendar --> */}
 
               {/* <!-- Menu Item Profile --> */}
-              {/* <li>
-                <MenuItem
-                  title="Profile"
-                  href="/profile"
-                  icon={<User2Icon className="h-6 w-6" />}
-                ></MenuItem>
-              </li> */}
+
               {/* <!-- Menu Item Profile --> */}
 
               {/* <!-- Menu Item Forms --> */}
               {/* <li>
-                <MenuItem
-                  title="Form"
-                  href="/forms"
-                  icon={<FormInputIcon className="h-6 w-6" />}
-                ></MenuItem>
+             
               </li> */}
               {/* <!-- Menu Item Forms --> */}
 
               {/* <!-- Menu Item Tables --> */}
-              {/* <li>
-                <MenuItem
+              <li>
+                <LinkItem
                   title="Tables"
                   href="/tables"
                   icon={<Table2Icon className="h-6 w-6" />}
-                ></MenuItem>
-              </li> */}
+                ></LinkItem>
+              </li>
 
               {/* <!-- Menu Item Tables --> */}
 
               {/* <!-- Menu Item Settings --> */}
               <li>
-                <MenuItem
+                <LinkItem
                   title="Settings"
                   href="/settings"
                   icon={<Settings className="h-6 w-6" />}
-                ></MenuItem>
+                ></LinkItem>
               </li>
 
               {/* <!-- Menu Item Settings --> */}
 
               {/* <!-- Menu Item Chart --> */}
               <li>
-                <MenuItem
+                <LinkItem
                   title="Charts"
                   href="/charts"
                   icon={<BarChart2 className="h-6 w-6" />}
-                ></MenuItem>
+                ></LinkItem>
               </li>
 
               {/* <!-- Menu Item Chart --> */}
@@ -145,22 +140,22 @@ const Sidebar = ({}: SidebarProps) => {
 
               {/* <!-- Dropdown Menu Start --> */}
               <li>
-                <MenuItem
+                <LinkItem
                   title="UI"
                   href="/ui"
                   icon={<Component className="h-6 w-6" />}
-                ></MenuItem>
+                ></LinkItem>
               </li>
 
               {/* <!-- Menu Item Ui Elements --> */}
 
               {/* <!-- Menu Item Auth Pages --> */}
               <li>
-                <MenuItem
+                <LinkItem
                   title="Authentication"
                   href="/auth"
                   icon={<LockIcon className="h-6 w-6" />}
-                ></MenuItem>
+                ></LinkItem>
               </li>
 
               {/* <!-- Menu Item Auth Pages --> */}

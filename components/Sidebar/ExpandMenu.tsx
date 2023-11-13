@@ -2,6 +2,7 @@
 import React from "react";
 import { ChevronRight, HomeIcon } from "lucide-react";
 import { cn } from "@/app/libs/utlis";
+import LinkItem from "./LinkItem";
 
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
 
@@ -21,34 +22,39 @@ const ExpandMenu = (props: Props) => {
   const [open, setOpen] = React.useState(false);
   const { isSidebarOpen } = useSidebar((state) => state);
   return (
-    <Collapsible open={open} onOpenChange={setOpen} className={cn("px-3 py-2")}>
-      <CollapsibleTrigger asChild className="group w-full ">
-        <div className="flex w-full items-center ">
-          <HomeIcon className="  h-6 w-6 hover:text-white" />
-          <div
-            className={cn(
-              "flex w-full transform items-center justify-between duration-300 ease-in",
-              {
-                hidden: !isSidebarOpen,
-              },
-            )}
-          >
-            <p className={cn("ml-2 text-lg group-hover:text-white ", {})}>
-              Dashboards
-            </p>
-            <ChevronRight
+    <Collapsible open={open} onOpenChange={setOpen} className="">
+      <CollapsibleTrigger asChild className="group rounded-sm px-3 py-2  ">
+        {isSidebarOpen ? (
+          <div className="flex w-full items-center ">
+            <HomeIcon className="  h-6 w-6 hover:text-white" />
+            <div
               className={cn(
-                "ml-2 h-4 w-4 transform  duration-300 ease-in-out group-hover:rotate-90 ",
-                {
-                  "rotate-90": open,
-                },
+                "flex w-full transform items-center justify-between duration-300 ease-in",
               )}
-            />
+            >
+              <p className={cn("ml-2 text-lg group-hover:text-white ", {})}>
+                Dashboards
+              </p>
+              <ChevronRight
+                className={cn(
+                  "ml-2 h-4 w-4 transform  duration-300 ease-in-out group-hover:rotate-90 ",
+                  {
+                    "rotate-90": open,
+                  },
+                )}
+              />
+            </div>
           </div>
-        </div>
+        ) : (
+          <LinkItem
+            title="Home"
+            href="/"
+            icon={<HomeIcon className="h-6 w-6" />}
+          ></LinkItem>
+        )}
       </CollapsibleTrigger>
       <CollapsibleContent className={s.CollapsibleContent}>
-        {isSidebarOpen && children}
+        <div className="px-3">{isSidebarOpen && children}</div>
       </CollapsibleContent>
     </Collapsible>
   );
