@@ -1,4 +1,7 @@
 /* styles.css */
+.root {
+  @apply px-3 py-2;
+}
 .CollapsibleContent {
   overflow: hidden;
 }

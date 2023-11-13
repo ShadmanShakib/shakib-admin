@@ -39,7 +39,7 @@ const Sidebar = ({}: SidebarProps) => {
       )}
     >
       {/* <!-- SIDEBAR HEADER --> */}
-      <div className="relative flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
+      <div className="relative flex w-full items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
         <Link className="flex items-center" href="/">
           <Image
             className="h-6 w-6 rounded-md"
@@ -54,6 +54,9 @@ const Sidebar = ({}: SidebarProps) => {
             </h1>
           )}
         </Link>
+        {isSidebarOpen && (
+          <MenuIcon onClick={toggleSidebar} className="h-6 w-6" />
+        )}
       </div>
       {/* <!-- SIDEBAR HEADER --> */}
 
@@ -69,15 +72,10 @@ const Sidebar = ({}: SidebarProps) => {
             >
               {/* <!-- Menu Item Dashboard --> */}
 
-              <MenuItem
-                href="/"
-                icon={<HomeIcon className="h-6 w-6 hover:text-white" />}
-                title="Dashboard"
-              >
+              <ExpandMenu>
                 <LinkItem icon={<ShoppingBag />} title="E-commerce" href="/" />
                 <LinkItem icon={<AreaChart />} title="SaaS" href="/saas" />
-              </MenuItem>
-              <ExpandMenu />
+              </ExpandMenu>
               {/* <!-- Menu Item Dashboard --> */}
 
               {/* <!-- Menu Item Calendar --> */}

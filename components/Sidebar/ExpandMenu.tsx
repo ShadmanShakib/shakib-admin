@@ -1,5 +1,7 @@
 "use client";
 import React from "react";
+import { ChevronRight, HomeIcon } from "lucide-react";
+import { cn } from "@/app/libs/utlis";
 
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
 
@@ -9,14 +11,44 @@ const CollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger;
 
 const CollapsibleContent = CollapsiblePrimitive.CollapsibleContent;
 import s from "./style.module.css";
-type Props = {};
+import { useSidebar } from "./use-sidebar";
+type Props = {
+  children?: React.ReactNode;
+};
 
 const ExpandMenu = (props: Props) => {
+  const { children } = props;
+  const [open, setOpen] = React.useState(false);
+  const { isSidebarOpen } = useSidebar((state) => state);
   return (
-    <Collapsible className="transform transition duration-150 ease-linear">
-      <CollapsibleTrigger>Dashboard</CollapsibleTrigger>
+    <Collapsible open={open} onOpenChange={setOpen} className={cn("px-3 py-2")}>
+      <CollapsibleTrigger asChild className="group w-full ">
+        <div className="flex w-full items-center ">
+          <HomeIcon className="  h-6 w-6 hover:text-white" />
+          <div
+            className={cn(
+              "flex w-full transform items-center justify-between duration-300 ease-in",
+              {
+                hidden: !isSidebarOpen,
+              },
+            )}
+          >
+            <p className={cn("ml-2 text-lg group-hover:text-white ", {})}>
+              Dashboards
+            </p>
+            <ChevronRight
+              className={cn(
+                "ml-2 h-4 w-4 transform  duration-300 ease-in-out group-hover:rotate-90 ",
+                {
+                  "rotate-90": open,
+                },
+              )}
+            />
+          </div>
+        </div>
+      </CollapsibleTrigger>
       <CollapsibleContent className={s.CollapsibleContent}>
-        <p>Content</p>
+        {isSidebarOpen && children}
       </CollapsibleContent>
     </Collapsible>
   );
