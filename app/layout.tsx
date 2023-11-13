@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        <div className="dark:bg-[#1a1a1a] dark:text-bodydark">
+        <div className="dark:bg-black dark:text-bodydark">
           {loading ? (
             <Loader />
           ) : (
