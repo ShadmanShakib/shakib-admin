@@ -1,11 +1,9 @@
 "use client";
 import React from "react";
-import ChartOne from "../Charts/ChartOne";
+
 import { AreaChart, SimpleBar } from "@/components/Charts";
 import ChatCard from "../Chat/ChatCard";
 import TableOne from "../Tables/TableOne";
-import CardDataStats from "../CardDataStats";
-// import Map from "../Maps/TestMap";
 
 // without this the component renders on server and throws an error
 import dynamic from "next/dynamic";
