@@ -131,7 +131,7 @@ const Sidebar = ({}: SidebarProps) => {
               <li>
                 <LinkItem
                   title="Charts"
-                  href="/charts"
+                  href="/chart"
                   icon={<BarChart2 className="h-6 w-6" />}
                 ></LinkItem>
               </li>
