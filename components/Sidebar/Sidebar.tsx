@@ -16,6 +16,7 @@ import {
   Table2Icon,
   FormInputIcon,
   HomeIcon,
+  LampIcon,
 } from "lucide-react";
 import { useSidebar } from "./use-sidebar";
 import { cn } from "@/app/libs/utlis";
@@ -72,13 +73,15 @@ const Sidebar = ({}: SidebarProps) => {
             >
               {/* <!-- Menu Item Dashboard --> */}
               <li>
-                <ExpandMenu>
+                <ExpandMenu
+                  name="Homepage"
+                  icon={<HomeIcon className="  h-6 w-6 hover:text-white" />}
+                >
                   <LinkItem
                     icon={<ShoppingBag />}
                     title="E-commerce"
                     href="/"
                   />
-                  <LinkItem icon={<AreaChart />} title="SaaS" href="/saas" />
                 </ExpandMenu>
               </li>
               {/* <!-- Menu Item Dashboard --> */}
@@ -91,19 +94,7 @@ const Sidebar = ({}: SidebarProps) => {
                   icon={<Calendar className="h-6 w-6" />}
                 ></LinkItem>
               </li>
-              {/* <!-- Menu Item Calendar --> */}
 
-              {/* <!-- Menu Item Profile --> */}
-
-              {/* <!-- Menu Item Profile --> */}
-
-              {/* <!-- Menu Item Forms --> */}
-              {/* <li>
-             
-              </li> */}
-              {/* <!-- Menu Item Forms --> */}
-
-              {/* <!-- Menu Item Tables --> */}
               <li>
                 <LinkItem
                   title="Tables"
@@ -124,6 +115,13 @@ const Sidebar = ({}: SidebarProps) => {
               </li>
 
               {/* <!-- Menu Item Settings --> */}
+              <li>
+                <LinkItem
+                  title="Profile"
+                  href="/profile"
+                  icon={<User2Icon className="h-6 w-6" />}
+                ></LinkItem>
+              </li>
 
               {/* <!-- Menu Item Chart --> */}
               <li>
@@ -151,11 +149,13 @@ const Sidebar = ({}: SidebarProps) => {
 
               {/* <!-- Menu Item Auth Pages --> */}
               <li>
-                <LinkItem
-                  title="Authentication"
-                  href="/auth"
-                  icon={<LockIcon className="h-6 w-6" />}
-                ></LinkItem>
+                <ExpandMenu name="Auth" icon={<LampIcon className="h-6 w-6" />}>
+                  <LinkItem
+                    title="Sign In"
+                    href="/auth/signin"
+                    icon={<LockIcon className="h-6 w-6" />}
+                  ></LinkItem>
+                </ExpandMenu>
               </li>
 
               {/* <!-- Menu Item Auth Pages --> */}
