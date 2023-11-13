@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/tailwindcss": "^0.2.0",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-collapsible": "^1.0.3",
     "@radix-ui/react-dialog": "^1.0.5",
     "@react-jvectormap/core": "^1.0.4",
     "@react-jvectormap/unitedstates": "^1.0.1",
+    "@tremor/react": "^3.11.0",
     "@types/node": "20.4.8",
     "@types/react": "latest",
     "@types/react-dom": "latest",
@@ -31,7 +33,6 @@
     "react-apexcharts": "^1.4.1",
     "react-dom": "latest",
     "react-jvectormap": "^0.0.16",
-    "recharts": "^2.9.3",
     "tailwind-merge": "^2.0.0",
     "tailwindcss": "3.3.3",
     "tailwindcss-animate": "^1.0.7",
