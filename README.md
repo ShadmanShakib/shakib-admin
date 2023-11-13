@@ -26,16 +26,6 @@ nique Dashboards: Analytics, Ecommerce, Marketing, and CRM (More will be added)
 
 ---
 
-### [⬇️ Download Now](https://ShakibAdimin.com/download)
-
-### [⚡ Get PRO Version](https://ShakibAdimin.com/pricing)
-
-### [📄 Documentation/Installation](https://ShakibAdimin.com/docs)
-
-### [🖌️ ShakibAdimin Figma Free Sample](https://www.figma.com/community/file/1214477970819985778)
-
-### [👉 ShakibAdimin HTML Version](https://github.com/ShakibAdimin/ShakibAdimin-free-tailwind-dashboard-template)
-
 ## Installation
 
 Here are the steps you need to follow to install the dependencies.

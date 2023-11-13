@@ -17,6 +17,10 @@ import {
   FormInputIcon,
   HomeIcon,
   LampIcon,
+  SignalHigh,
+  AlertCircle,
+  SwissFranc,
+  MousePointerClick,
 } from "lucide-react";
 import { useSidebar } from "./use-sidebar";
 import { cn } from "@/app/libs/utlis";
@@ -138,11 +142,18 @@ const Sidebar = ({}: SidebarProps) => {
 
               {/* <!-- Dropdown Menu Start --> */}
               <li>
-                <LinkItem
-                  title="UI"
-                  href="/ui"
-                  icon={<Component className="h-6 w-6" />}
-                ></LinkItem>
+                <ExpandMenu icon={<Component className="h-6 w-6" />} name="UI">
+                  <LinkItem
+                    title="Alerts"
+                    href="/ui/alerts"
+                    icon={<AlertCircle className="h-5 w-5" />}
+                  ></LinkItem>
+                  <LinkItem
+                    title="Buttons"
+                    href="/ui/buttons"
+                    icon={<MousePointerClick className="h-5 w-5" />}
+                  />
+                </ExpandMenu>
               </li>
 
               {/* <!-- Menu Item Ui Elements --> */}
@@ -153,7 +164,12 @@ const Sidebar = ({}: SidebarProps) => {
                   <LinkItem
                     title="Sign In"
                     href="/auth/signin"
-                    icon={<LockIcon className="h-6 w-6" />}
+                    icon={<LockIcon className="h-5 w-5" />}
+                  ></LinkItem>
+                  <LinkItem
+                    title="Sign up"
+                    href="/auth/signup"
+                    icon={<SignalHigh className="h-5 w-5" />}
                   ></LinkItem>
                 </ExpandMenu>
               </li>
