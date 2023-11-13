@@ -31,6 +31,7 @@
     "react-apexcharts": "^1.4.1",
     "react-dom": "latest",
     "react-jvectormap": "^0.0.16",
+    "recharts": "^2.9.3",
     "tailwind-merge": "^2.0.0",
     "tailwindcss": "3.3.3",
     "tailwindcss-animate": "^1.0.7",
