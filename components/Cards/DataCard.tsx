@@ -8,16 +8,20 @@ import {
 } from "@tremor/react";
 import React from "react";
 
-type Props = {};
+type Props = {
+  name: string;
+  amount: number;
+};
 
 const DataCard = (props: Props) => {
+  const { name, amount } = props;
   return (
     <div>
       <Card className="mx-auto max-w-lg">
         <Flex alignItems="start">
           <div>
-            <Text>Sales</Text>
-            <Metric>$ 12,699</Metric>
+            <Text>{name}</Text>
+            <Metric>$ {amount}</Metric>
           </div>
           <BadgeDelta deltaType="moderateIncrease">13.2%</BadgeDelta>
         </Flex>
