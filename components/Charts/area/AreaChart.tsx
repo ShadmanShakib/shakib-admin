@@ -37,7 +37,7 @@ const valueFormatter = function (number: number) {
   return "$ " + new Intl.NumberFormat("us").format(number).toString();
 };
 
-const ChartOne = () => (
+const Area = () => (
   <Card>
     <Title>Newsletter revenue over time (USD)</Title>
     <AreaChart
@@ -50,5 +50,4 @@ const ChartOne = () => (
     />
   </Card>
 );
-
-export default ChartOne;
+export default Area;

@@ -5,7 +5,7 @@ import "./satoshi.css";
 import { useState, useEffect } from "react";
 import Loader from "@/components/common/Loader";
 
-import Sidebar from "@/components/Sidebar";
+import Sidebar from "@/components/Sidebar/Sidebar";
 import Header from "@/components/Header";
 
 export default function RootLayout({
@@ -24,16 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        <div className="dark:bg-boxdark-2 dark:text-bodydark">
+        <div className="dark:bg-black dark:text-bodydark">
           {loading ? (
             <Loader />
           ) : (
             <div className="flex h-screen overflow-hidden">
               {/* <!-- ===== Sidebar Start ===== --> */}
-              <Sidebar
-                sidebarOpen={sidebarOpen}
-                setSidebarOpen={setSidebarOpen}
-              />
+              <Sidebar />
               {/* <!-- ===== Sidebar End ===== --> */}
 
               {/* <!-- ===== Content Area Start ===== --> */}

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Settings Page | Next.js E-commerce Dashboard Template",
-  description: "This is Settings page for TailAdmin Next.js",
+  description: "This is Settings page for ShakibAdmin Next.js",
   // other metadata
 };
 
@@ -63,8 +63,8 @@ const Settings = () => {
                           type="text"
                           name="fullName"
                           id="fullName"
-                          placeholder="Devid Jhon"
-                          defaultValue="Devid Jhon"
+                          placeholder="Sadman Shakib"
+                          defaultValue="Sadman Shakib"
                         />
                       </div>
                     </div>
@@ -81,8 +81,8 @@ const Settings = () => {
                         type="text"
                         name="phoneNumber"
                         id="phoneNumber"
-                        placeholder="+990 3343 7865"
-                        defaultValue="+990 3343 7865"
+                        placeholder="+880 3343 7865"
+                        defaultValue="+880 3343 7865"
                       />
                     </div>
                   </div>
@@ -125,7 +125,7 @@ const Settings = () => {
                         type="email"
                         name="emailAddress"
                         id="emailAddress"
-                        placeholder="sm.shakib007@gmail.com"
+                        placeholder="sm.shakib7@gmail.com"
                         defaultValue="sm.shakib007@gmail.com"
                       />
                     </div>
@@ -143,7 +143,7 @@ const Settings = () => {
                       type="text"
                       name="Username"
                       id="Username"
-                      placeholder="devidjhon24"
+                      placeholder="xsadmanshakib"
                       defaultValue="devidjhon24"
                     />
                   </div>
@@ -228,7 +228,8 @@ const Settings = () => {
                   <div className="mb-4 flex items-center gap-3">
                     <div className="h-14 w-14 rounded-full">
                       <Image
-                        src={"/images/user/user-03.png"}
+                        className="rounded-full"
+                        src={"/images/sadmanshakib.jpg"}
                         width={55}
                         height={55}
                         alt="User"
